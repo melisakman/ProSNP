@@ -5,7 +5,7 @@
 #SBATCH -e /home/makman/ProSNP/outs/demultiplex_Plate124_stderr.txt
 #SBATCH --mail-type=All
 #SBATCH --mail-user=makman@ucdavis.edu
-#SBATCH -p med
+#SBATCH -p hi
 #SBATCH --ntasks=32
 #SBATCH --array=0-3
 module load FASTX-Toolkit
