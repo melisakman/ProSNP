@@ -5,7 +5,7 @@
 #SBATCH -e /home/makman/ProSNP/outs/demultiplex_Plate124_1_stderr.txt
 #SBATCH --mail-type=All
 #SBATCH --mail-user=makman@ucdavis.edu
-#SBATCH -p hi
+#SBATCH -p bigmemh
 #SBATCH --ntasks=32
 module load FASTX-Toolkit
 module load perl
