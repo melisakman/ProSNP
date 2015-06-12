@@ -9,4 +9,4 @@
 #SBATCH --ntasks=32
 module load FASTX-Toolkit
 module load perl
-cat /home/makman/ProSNP/trimmomatic/Plate1_2_forward.fastq | /home/makman/ProSNP/fastx_barcode_splitter.pl --bcfile barcodes_Plate12.txt --bol --prefix ProSNP_ --suffix .fastq --mismatches 1
+cat /home/makman/ProSNP/trimmomatic/Plate1_2_forward.fastq | /home/makman/ProSNP/fastx_barcode_splitter.pl --bcfile barcodes_Plate12.txt --bol --prefix ProSNP1_ --suffix .fastq --mismatches 1
