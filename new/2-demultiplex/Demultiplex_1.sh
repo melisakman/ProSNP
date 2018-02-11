@@ -6,7 +6,7 @@
 #SBATCH --mail-type=All
 #SBATCH --time=72:00:00
 #SBATCH --mail-user=makman@berkeley.edu
-#SBATCH -p serial
+#SBATCH -p bigmemm
 module load perl
 # cat plate12_R1.fastq | /home/makman/ProSNP/fastx_barcode_splitter.pl --bcfile /home/makman/ProSNP/demultiplexbarcodes_plate12.txt --bol --prefix ProSNP12_ --suffix _R1.fastq --mismatches 1 | gzip
 # cat plate12_R2.fastq | /home/makman/ProSNP/fastx_barcode_splitter.pl --bcfile /home/makman/ProSNP/demultiplexbarcodes_plate12.txt --bol --prefix ProSNP12_ --suffix _R2.fastq --mismatches 1 | gzip
