@@ -5,11 +5,9 @@
 #SBATCH -e /home/makman/ProSNP/outs/cat_AMPM.err
 #SBATCH --mail-type=All
 #SBATCH --mail-user=makman@ucdavis.edu
-#SBATCH -p bigmemm
-#SBATCH --mem=12000
+#SBATCH --mem=6000
 #SBATCH --array=1-192
 #SBATCH --time=24:00:00
-
 
 cat ProSNP5_ma3_ALC502_AM_R1.fastq ProSNP5_ma3_ALC502_PM_R1.fastq > ProSNP5_ALC502_R1.fastq
 cat ProSNP5_ma3_ALC62_AM_R1.fastq ProSNP5_ma3_ALC62_PM_R1.fastq > ProSNP5_ALC62_R1.fastq
