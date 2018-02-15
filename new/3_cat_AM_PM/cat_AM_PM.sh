@@ -8,6 +8,8 @@
 #SBATCH -p bigmemm
 #SBATCH --ntasks=4
 #SBATCH --array=1-192
+#SBATCH --time=72:00:00
+
 
 ProSNP5_ma3_ALC502_AM_R1.fastq ProSNP5_ma3_ALC502_PM_R1.fastq > ProSNP5_ALC502_R1.fastq
 ProSNP5_ma3_ALC62_AM_R1.fastq ProSNP5_ma3_ALC62_PM_R1.fastq > ProSNP5_ALC62_R1.fastq
