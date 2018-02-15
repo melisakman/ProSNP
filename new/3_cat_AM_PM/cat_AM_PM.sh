@@ -6,9 +6,9 @@
 #SBATCH --mail-type=All
 #SBATCH --mail-user=makman@ucdavis.edu
 #SBATCH -p bigmemm
-#SBATCH --ntasks=4
+#SBATCH --mem=12000
 #SBATCH --array=1-192
-#SBATCH --time=72:00:00
+#SBATCH --time=24:00:00
 
 
 cat ProSNP5_ma3_ALC502_AM_R1.fastq ProSNP5_ma3_ALC502_PM_R1.fastq > ProSNP5_ALC502_R1.fastq
