@@ -7,7 +7,7 @@
 #SBATCH --mail-user=makman@ucdavis.edu
 #SBATCH --array=1-192
 #SBATCH --time=24:00:00
-#SBATCH -p serial
+#SBATCH -p bigmemh
 
 
 cat ProSNP5_ma3_ALC502_AM_R1.fastq ProSNP5_ma3_ALC502_PM_R1.fastq > ProSNP5_ALC502_R1.fastq
