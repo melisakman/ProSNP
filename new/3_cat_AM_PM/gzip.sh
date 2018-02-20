@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH -D /home/makman/Rawdata/combined/
+#SBATCH -D /home/makman/Rawdata/combined/AM_PM/
 #SBATCH -J gzip
 #SBATCH -o /home/makman/ProSNP/outs/gzip.out
 #SBATCH -e /home/makman/ProSNP/outs/gzip.err
