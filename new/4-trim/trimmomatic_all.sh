@@ -6,7 +6,7 @@
 #SBATCH --mail-type=All
 #SBATCH --mail-user=makman@uberkeley.edu
 #SBATCH -p bigmemm
-#SBATCH --mem=48000
+#SBATCH --mem=16000
 #SBATCH --array=1-344
 #SBATCH --time=400:00:00
 
