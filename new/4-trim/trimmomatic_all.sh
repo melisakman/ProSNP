@@ -8,6 +8,8 @@
 #SBATCH -p bigmemm
 #SBATCH --ntasks=32
 #SBATCH --array=1-344
+#SBATCH --time=400:00:00
+
 module load java
 java -jar ../../trimmomatic/trimmomatic-0.33.jar PE ProSNP5_ALC1045_R1.fastq.gz ProSNP5_ALC1045_R2.fastq.gz ProSNP5_ALC1045_R1_paired.fastq.gz ProSNP5_ALC1045_R1_unpaired.fastq.gz ProSNP5_ALC1045_R2_paired.fastq.gz ProSNP5_ALC1045_R2_unpaired.fastq.gz ILLUMINACLIP:adapters.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 java -jar ../../trimmomatic/trimmomatic-0.33.jar PE ProSNP5_ALC230_R1.fastq.gz ProSNP5_ALC230_R2.fastq.gz ProSNP5_ALC230_R1_paired.fastq.gz ProSNP5_ALC230_R1_unpaired.fastq.gz ProSNP5_ALC230_R2_paired.fastq.gz ProSNP5_ALC230_R2_unpaired.fastq.gz ILLUMINACLIP:adapters.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
