@@ -4,9 +4,9 @@
 #SBATCH -o /home/makman/ProSNP/outs/trimmomatic_ProSNP_stdout.txt
 #SBATCH -e /home/makman/ProSNP/outs/trimmomatic_ProSNP_stderr.txt
 #SBATCH --mail-type=All
-#SBATCH --mail-user=makman@uberkeley.edu
-#SBATCH -p bigmeml
-#SBATCH --mem=16000
+#SBATCH --mail-user=makman@berkeley.edu
+#SBATCH -p bigmemm
+#SBATCH --mem=32000
 #SBATCH --array=1-344
 #SBATCH --time=400:00:00
 
