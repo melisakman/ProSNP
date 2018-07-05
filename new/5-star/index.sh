@@ -11,5 +11,5 @@
 #SBATCH --cpus-per-task=6
 
 
-./STAR --runThreadN 6 --runMode genomeGenerate --genomeDir /home/makman/Protea_assembly/index/star --genomeFastaFiles /path/to/genome/fasta1 /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa --sjdbGTFfile /home/makman/Protea_assembly/prepens75_85.gff3 --sjdbOverhang 100
+./STAR --runThreadN 6 --runMode genomeGenerate --genomeDir /home/makman/Protea_assembly/index/star --genomeFastaFiles /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa --sjdbGTFfile /home/makman/Protea_assembly/prepens75_85.gff3 --sjdbOverhang 100
 
