@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH -D /home/makman/
+#SBATCH -D /home/makman/home/makman/STAR/bin/Linux_x86_64/
 #SBATCH -J star
 #SBATCH -o /home/makman/ProSNP/outs/star_index.out
 #SBATCH -e /home/makman/ProSNP/outs/star_index.err
@@ -11,7 +11,7 @@
 #SBATCH --cpus-per-task=6
 
 
-./home/makman/STAR/bin/Linux_x86_64/STAR --runThreadN 6 /
+./STAR --runThreadN 6 /
 --runMode genomeGenerate /
 --genomeDir /home/makman/Protea_assembly/index/star /
 --genomeFastaFiles /path/to/genome/fasta1 /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa /
