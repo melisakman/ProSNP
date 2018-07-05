@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH -D /home/makman/home/makman/STAR/bin/Linux_x86_64/
+#SBATCH -D /home/makman/STAR/bin/Linux_x86_64/
 #SBATCH -J star
 #SBATCH -o /home/makman/ProSNP/outs/star_index.out
 #SBATCH -e /home/makman/ProSNP/outs/star_index.err
