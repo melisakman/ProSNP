@@ -6,10 +6,10 @@
 #SBATCH --mail-type=All
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH -p bigmemm
-#SBATCH --mem=248000
+#SBATCH --mem=160000
 #SBATCH --time=400:00:00
-#SBATCH --cpus-per-task=30
+#SBATCH --cpus-per-task=28
 
 
-./STAR --runThreadN 30 --runMode genomeGenerate --genomeDir /home/makman/Protea_assembly/index/star --genomeFastaFiles /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa --sjdbGTFfile /home/makman/Protea_assembly/prepens75_85.gff3 --sjdbOverhang 100
+./STAR --runThreadN 28 --runMode genomeGenerate --genomeDir /home/makman/Protea_assembly/index/star --genomeFastaFiles /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa --sjdbGTFfile /home/makman/Protea_assembly/prepens75_85.gff3 --sjdbOverhang 100
 
