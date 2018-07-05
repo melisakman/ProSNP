@@ -8,7 +8,7 @@
 #SBATCH -p bigmemm
 #SBATCH --mem=32000
 #SBATCH --time=400:00:00
-#SBATCH --cpus-per-task = 6
+#SBATCH --cpus-per-task=6
 
 
 /home/makman/STAR/bin/Linux_x86_64/STAR --runThreadN 6
