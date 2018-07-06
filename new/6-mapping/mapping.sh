@@ -17,8 +17,8 @@ module load perlbrew/5.16.0
 # /share/apps/fastx-0.0.14/bin/fastq_to_fasta -i /home/makman/Rawdata/combined/ProSNP12_ALC_12_R1_paired.fastq -z -o /home/makman/Rawdata/combined/ProSNP12_ALC_12_R1_paired.fasta.gz
 # /share/apps/fastx-0.0.14/bin/fastq_to_fasta -i /home/makman/Rawdata/combined/ProSNP12_ALC_12_R2_paired.fastq -z -o /home/makman/Rawdata/combined/ProSNP12_ALC_12_R2_paired.fasta.gz
 # 
-zcat ProSNP12_ALC_12_R1_paired.fasta.gz | sed -s 's/ 1:N:0://' | gzip -c > ProSNP12_ALC_12_R1_paired_noPairInfo.fasta
-zcat ProSNP12_ALC_12_R2_paired.fasta.gz | sed -s 's/ 3:N:0://' | gzip -c > ProSNP12_ALC_12_R2_paired_noPairInfo.fasta
+zcat /home/makman/Rawdata/combined/ProSNP12_ALC_12_R1_paired.fasta.gz | sed -s 's/ 1:N:0://' | gzip -c > /home/makman/Rawdata/combined/ProSNP12_ALC_12_R1_paired_noPairInfo.fasta.gz
+zcat /home/makman/Rawdata/combined/ProSNP12_ALC_12_R2_paired.fasta.gz | sed -s 's/ 3:N:0://' | gzip -c > /home/makman/Rawdata/combined/ProSNP12_ALC_12_R2_paired_noPairInfo.fasta.gz
 
 ./STAR --runThreadN 9 --genomeDir /home/makman/Protea_assembly/index/star --readFilesIn /home/makman/Rawdata/combined/ProSNP12_ALC_12_R1_paired_noPairInfo.fasta.gz /home/makman/Rawdata/combined/ProSNP12_ALC_12_R2_paired_noPairInfo.fasta.gz --outFileNamePrefix /home/makman/ProSNP/mapping/ProSNP12_ALC_12 --outSAMmapqUnique 60 --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat
 # ./STAR --runThreadN 9 --genomeDir /home/makman/Protea_assembly/index/star --readFilesIn /home/makman/Rawdata/combined/ProSNP12_ALC_34_R1_paired.fastq.gz /home/makman/Rawdata/combined/ProSNP12_ALC_34_R2_paired.fastq.gz --outFileNamePrefix /home/makman/ProSNP/mapping/ProSNP12_ALC_34 --outSAMmapqUnique 60 --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat
