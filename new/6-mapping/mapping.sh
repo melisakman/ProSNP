@@ -10,6 +10,7 @@
 #SBATCH --time=400:00:00
 
 module load fastx/0.0.14
+module load perlbrew/5.16.0
 fastq_to_fasta -i /home/makman/Rawdata/combined/ProSNP12_ALC_12_R1_paired.fastq.gz -z -o /home/makman/Rawdata/combined/ProSNP12_ALC_12_R1_paired.fasta.gz
 fastq_to_fasta -i /home/makman/Rawdata/combined/ProSNP12_ALC_12_R2_paired.fastq.gz -z -o /home/makman/Rawdata/combined/ProSNP12_ALC_12_R2_paired.fasta.gz
 
