@@ -1,8 +1,8 @@
 #!/bin/bash -l
 #SBATCH -D /home/makman/STAR/bin/Linux_x86_64/
 #SBATCH -J star
-#SBATCH -o /home/makman/ProSNP/outs/star_map_b.out
-#SBATCH -e /home/makman/ProSNP/outs/star_map_b.err
+#SBATCH -o /home/makman/ProSNP/outs/star_map.out
+#SBATCH -e /home/makman/ProSNP/outs/star_map.err
 #SBATCH --mail-type=All
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH -p bigmemm
@@ -22,10 +22,10 @@ module load perlbrew/5.16.0
 # gunzip /home/makman/Rawdata/combined/ProSNP12_ALC_12_R2_paired_noPairInfo.fasta.gz
 # /share/apps/fastx-0.0.14/bin/fastx_reverse_complement -i /home/makman/Rawdata/combined/ProSNP12_ALC_12_R2_paired_noPairInfo.fasta -z -o /home/makman/Rawdata/combined/ProSNP12_ALC_12_R2_paired_noPairInfo_RC.fasta.gz
 # ./STAR --runThreadN 9 --genomeDir /home/makman/Protea_assembly/index/star --readFilesIn /home/makman/Rawdata/combined/ProSNP12_ALC_12_R1_paired_noPairInfo.fasta.gz /home/makman/Rawdata/combined/ProSNP12_ALC_12_R2_paired_noPairInfo_RC.fasta.gz --outFileNamePrefix /home/makman/ProSNP/mapping/ProSNP12_ALC_12 --outSAMmapqUnique 60 --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat
-./STAR --runThreadN 9 --genomeDir /home/makman/Protea_assembly/index/star --readFilesIn /home/makman/Rawdata/combined/ProSNP12_ALC_12_R1_paired.fasta.gz /home/makman/Rawdata/combined/ProSNP12_ALC_12_R2_paired.fasta.gz --outFileNamePrefix /home/makman/ProSNP/mapping/ProSNP12_ALC_12_B --outSAMmapqUnique 60 --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat
+# ./STAR --runThreadN 9 --genomeDir /home/makman/Protea_assembly/index/star --readFilesIn /home/makman/Rawdata/combined/ProSNP12_ALC_12_R1_paired.fasta.gz /home/makman/Rawdata/combined/ProSNP12_ALC_12_R2_paired.fasta.gz --outFileNamePrefix /home/makman/ProSNP/mapping/ProSNP12_ALC_12_B --outSAMmapqUnique 60 --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat
+./STAR --runThreadN 9 --genomeDir /home/makman/Protea_assembly/index/star --readFilesIn /home/makman/Rawdata/combined/ProSNP5_ALC1045_R1.fastq.gz /home/makman/Rawdata/combined/ProSNP5_ALC1045_R2.fastq.gz --outFileNamePrefix /home/makman/ProSNP/mapping/ProSNP12_ALC_12_C --outSAMmapqUnique 60 --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat
 
-
-
+ 
 # ./STAR --runThreadN 9 --genomeDir /home/makman/Protea_assembly/index/star --readFilesIn /home/makman/Rawdata/combined/ProSNP12_ALC_34_R1_paired.fastq.gz /home/makman/Rawdata/combined/ProSNP12_ALC_34_R2_paired.fastq.gz --outFileNamePrefix /home/makman/ProSNP/mapping/ProSNP12_ALC_34 --outSAMmapqUnique 60 --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat
 # ./STAR --runThreadN 9 --genomeDir /home/makman/Protea_assembly/index/star --readFilesIn /home/makman/Rawdata/combined/ProSNP12_ALC_44_R1_paired.fastq.gz /home/makman/Rawdata/combined/ProSNP12_ALC_44_R2_paired.fastq.gz --outFileNamePrefix /home/makman/ProSNP/mapping/ProSNP12_ALC_44 --outSAMmapqUnique 60 --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat
 # ./STAR --runThreadN 9 --genomeDir /home/makman/Protea_assembly/index/star --readFilesIn /home/makman/Rawdata/combined/ProSNP12_ANY_19_R1_paired.fastq.gz /home/makman/Rawdata/combined/ProSNP12_ANY_19_R2_paired.fastq.gz --outFileNamePrefix /home/makman/ProSNP/mapping/ProSNP12_ANY_19 --outSAMmapqUnique 60 --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat
