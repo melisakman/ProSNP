@@ -8,7 +8,6 @@
 #SBATCH bigmemm
 #SBATCH --mem=72GB
 #SBATCH --time=400:00:00
-#SBATCH --array=1-344
 module load fastx/0.0.14
 module load perlbrew/5.16.0
 # gunzip *_paired.fastq.gz
