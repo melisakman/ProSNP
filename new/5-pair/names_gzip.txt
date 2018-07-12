@@ -1,17 +1,3 @@
-#!/bin/bash -l
-#SBATCH -D /home/makman/Rawdata/combined/
-#SBATCH -J star
-#SBATCH -o /home/makman/ProSNP/outs/pair-up.out
-#SBATCH -e /home/makman/ProSNP/outs/pair-up.err
-#SBATCH --mail-type=All
-#SBATCH --mail-user=makman@berkeley.edu
-#SBATCH bigmemm
-#SBATCH --mem=72GB
-#SBATCH --time=400:00:00
-#SBATCH --array=1-344
-module load fastx/0.0.14
-module load perlbrew/5.16.0
-# gunzip *_paired.fastq.gz
 /home/makman/fastq-pair/build/fastq_pair -t 5088974 /home/makman/Rawdata/combined/ProSNP12_ALC_12_R1_paired.fastq /home/makman/Rawdata/combined/ProSNP12_ALC_12_R2_paired.fastq
 gzip ProSNP12_ALC_12_R1_paired.fastq
 gzip ProSNP12_ALC_12_R2_paired.fastq
