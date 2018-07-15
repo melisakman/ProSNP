@@ -1,8 +1,8 @@
 #!/bin/bash -l
 #SBATCH -D /home/makman/Rawdata/combined
 #SBATCH -J star
-#SBATCH -o /home/makman/ProSNP/outs/pair-up.out
-#SBATCH -e /home/makman/ProSNP/outs/pair-up.err
+#SBATCH -o /home/makman/ProSNP/outs/pair-up_b.out
+#SBATCH -e /home/makman/ProSNP/outs/pair-up_b.err
 #SBATCH --mail-type=All
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH -p bigmemm
@@ -561,11 +561,11 @@ module load perlbrew/5.16.0
 # /home/makman/fastq-pair/build/fastq_pair -t 5167048 /home/makman/Rawdata/combined/ProSNP5_CDB564_R1_paired.fastq /home/makman/Rawdata/combined/ProSNP5_CDB564_R2_paired.fastq
 # gzip ProSNP5_CDB564_R1_paired.fastq
 # gzip ProSNP5_CDB564_R2_paired.fastq
-gunzip ProSNP5_CER1117_R1_paired.fastq.gz
-gunzip ProSNP5_CER1117_R2_paired.fastq.gz
-/home/makman/fastq-pair/build/fastq_pair -t 4778384 /home/makman/Rawdata/combined/ProSNP5_CER1117_R1_paired.fastq /home/makman/Rawdata/combined/ProSNP5_CER1117_R2_paired.fastq
-gzip ProSNP5_CER1117_R1_paired.fastq
-gzip ProSNP5_CER1117_R2_paired.fastq
+# gunzip ProSNP5_CER1117_R1_paired.fastq.gz
+# gunzip ProSNP5_CER1117_R2_paired.fastq.gz
+# /home/makman/fastq-pair/build/fastq_pair -t 4778384 /home/makman/Rawdata/combined/ProSNP5_CER1117_R1_paired.fastq /home/makman/Rawdata/combined/ProSNP5_CER1117_R2_paired.fastq
+# gzip ProSNP5_CER1117_R1_paired.fastq
+# gzip ProSNP5_CER1117_R2_paired.fastq
 # /home/makman/fastq-pair/build/fastq_pair -t 6071895 /home/makman/Rawdata/combined/ProSNP5_CER2_R1_paired.fastq /home/makman/Rawdata/combined/ProSNP5_CER2_R2_paired.fastq
 # gzip ProSNP5_CER2_R1_paired.fastq
 # gzip ProSNP5_CER2_R2_paired.fastq
@@ -578,9 +578,12 @@ gzip ProSNP5_CER1117_R2_paired.fastq
 # /home/makman/fastq-pair/build/fastq_pair -t 5589598 /home/makman/Rawdata/combined/ProSNP5_CER78_R1_paired.fastq /home/makman/Rawdata/combined/ProSNP5_CER78_R2_paired.fastq
 # gzip ProSNP5_CER78_R1_paired.fastq
 # gzip ProSNP5_CER78_R2_paired.fastq
-# /home/makman/fastq-pair/build/fastq_pair -t 5298310 /home/makman/Rawdata/combined/ProSNP5_GAR1019_R1_paired.fastq /home/makman/Rawdata/combined/ProSNP5_GAR1019_R2_paired.fastq
-# gzip ProSNP5_GAR1019_R1_paired.fastq
-# gzip ProSNP5_GAR1019_R2_paired.fastq
+
+gunzip ProSNP5_GAR1019_R1_paired.fastq.gz
+gunzip ProSNP5_GAR1019_R2_paired.fastq.gz
+/home/makman/fastq-pair/build/fastq_pair -t 5298310 /home/makman/Rawdata/combined/ProSNP5_GAR1019_R1_paired.fastq /home/makman/Rawdata/combined/ProSNP5_GAR1019_R2_paired.fastq
+gzip ProSNP5_GAR1019_R1_paired.fastq
+gzip ProSNP5_GAR1019_R2_paired.fastq
 # /home/makman/fastq-pair/build/fastq_pair -t 4454611 /home/makman/Rawdata/combined/ProSNP5_GAR434_R1_paired.fastq /home/makman/Rawdata/combined/ProSNP5_GAR434_R2_paired.fastq
 # gzip ProSNP5_GAR434_R1_paired.fastq
 # gzip ProSNP5_GAR434_R2_paired.fastq
