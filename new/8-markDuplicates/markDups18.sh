@@ -1,8 +1,8 @@
 #!/bin/bash -l
 #SBATCH -D /home/makman/ProSNP/mapping/bams
-#SBATCH -J markdup1
-#SBATCH -o /home/makman/ProSNP/outs/mark_duplicates1.out
-#SBATCH -e /home/makman/ProSNP/outs/mark_duplicates1.err
+#SBATCH -J markdu18
+#SBATCH -o /home/makman/ProSNP/outs/mark_duplicates18.out
+#SBATCH -e /home/makman/ProSNP/outs/mark_duplicates18.err
 #SBATCH --mail-type=All
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH -p bigmemm
@@ -11,26 +11,26 @@
 module load picardtools/2.7.1
 module load java
 
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_ALC_1045_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_ALC_1045_markDups.bam METRICS_FILE=metrics_ProSNP12_ALC_1045.txt
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_ALC_12_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_ALC_12_markDups.bam METRICS_FILE=metrics_ProSNP12_ALC_12.txt
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_ALC_34_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_ALC_34_markDups.bam METRICS_FILE=metrics_ProSNP12_ALC_34.txt
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_ALC_44_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_ALC_44_markDups.bam METRICS_FILE=metrics_ProSNP12_ALC_44.txt
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_ANY_19_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_ANY_19_markDups.bam METRICS_FILE=metrics_ProSNP12_ANY_19.txt
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_ANY_1_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_ANY_1_markDups.bam METRICS_FILE=metrics_ProSNP12_ANY_1.txt
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_ANY_30_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_ANY_30_markDups.bam METRICS_FILE=metrics_ProSNP12_ANY_30.txt
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_BAN_21_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_BAN_21_markDups.bam METRICS_FILE=metrics_ProSNP12_BAN_21.txt
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_BAN_35_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_BAN_35_markDups.bam METRICS_FILE=metrics_ProSNP12_BAN_35.txt
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_BAN_3_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_BAN_3_markDups.bam METRICS_FILE=metrics_ProSNP12_BAN_3.txt
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_BAV_20_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_BAV_20_markDups.bam METRICS_FILE=metrics_ProSNP12_BAV_20.txt
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_BAV_32_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_BAV_32_markDups.bam METRICS_FILE=metrics_ProSNP12_BAV_32.txt
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_BAV_44_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_BAV_44_markDups.bam METRICS_FILE=metrics_ProSNP12_BAV_44.txt
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_BRD_1_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_BRD_1_markDups.bam METRICS_FILE=metrics_ProSNP12_BRD_1.txt
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_BRD_22_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_BRD_22_markDups.bam METRICS_FILE=metrics_ProSNP12_BRD_22.txt
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_BRD_41_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_BRD_41_markDups.bam METRICS_FILE=metrics_ProSNP12_BRD_41.txt
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_CDB_26_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_CDB_26_markDups.bam METRICS_FILE=metrics_ProSNP12_CDB_26.txt
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_CDB_2_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_CDB_2_markDups.bam METRICS_FILE=metrics_ProSNP12_CDB_2.txt
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_CDB_40_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_CDB_40_markDups.bam METRICS_FILE=metrics_ProSNP12_CDB_40.txt
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_CER_1_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_CER_1_markDups.bam METRICS_FILE=metrics_ProSNP12_CER_1.txt
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_ALC_1045_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_ALC_1045_markDups.bam METRICS_FILE=metrics_ProSNP12_ALC_1045.txt
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_ALC_12_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_ALC_12_markDups.bam METRICS_FILE=metrics_ProSNP12_ALC_12.txt
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_ALC_34_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_ALC_34_markDups.bam METRICS_FILE=metrics_ProSNP12_ALC_34.txt
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_ALC_44_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_ALC_44_markDups.bam METRICS_FILE=metrics_ProSNP12_ALC_44.txt
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_ANY_19_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_ANY_19_markDups.bam METRICS_FILE=metrics_ProSNP12_ANY_19.txt
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_ANY_1_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_ANY_1_markDups.bam METRICS_FILE=metrics_ProSNP12_ANY_1.txt
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_ANY_30_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_ANY_30_markDups.bam METRICS_FILE=metrics_ProSNP12_ANY_30.txt
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_BAN_21_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_BAN_21_markDups.bam METRICS_FILE=metrics_ProSNP12_BAN_21.txt
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_BAN_35_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_BAN_35_markDups.bam METRICS_FILE=metrics_ProSNP12_BAN_35.txt
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_BAN_3_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_BAN_3_markDups.bam METRICS_FILE=metrics_ProSNP12_BAN_3.txt
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_BAV_20_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_BAV_20_markDups.bam METRICS_FILE=metrics_ProSNP12_BAV_20.txt
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_BAV_32_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_BAV_32_markDups.bam METRICS_FILE=metrics_ProSNP12_BAV_32.txt
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_BAV_44_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_BAV_44_markDups.bam METRICS_FILE=metrics_ProSNP12_BAV_44.txt
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_BRD_1_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_BRD_1_markDups.bam METRICS_FILE=metrics_ProSNP12_BRD_1.txt
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_BRD_22_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_BRD_22_markDups.bam METRICS_FILE=metrics_ProSNP12_BRD_22.txt
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_BRD_41_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_BRD_41_markDups.bam METRICS_FILE=metrics_ProSNP12_BRD_41.txt
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_CDB_26_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_CDB_26_markDups.bam METRICS_FILE=metrics_ProSNP12_CDB_26.txt
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_CDB_2_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_CDB_2_markDups.bam METRICS_FILE=metrics_ProSNP12_CDB_2.txt
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_CDB_40_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_CDB_40_markDups.bam METRICS_FILE=metrics_ProSNP12_CDB_40.txt
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_CER_1_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_CER_1_markDups.bam METRICS_FILE=metrics_ProSNP12_CER_1.txt
 # java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_CER_22_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_CER_22_markDups.bam METRICS_FILE=metrics_ProSNP12_CER_22.txt
 # java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_CER_42_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_CER_42_markDups.bam METRICS_FILE=metrics_ProSNP12_CER_42.txt
 # java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP12_GAR_1_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP12_GAR_1_markDups.bam METRICS_FILE=metrics_ProSNP12_GAR_1.txt
@@ -351,8 +351,8 @@ java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2
 # java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP6_UNI_479_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP6_UNI_479_markDups.bam METRICS_FILE=metrics_ProSNP6_UNI_479.txt
 # java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP6_UNI_546_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP6_UNI_546_markDups.bam METRICS_FILE=metrics_ProSNP6_UNI_546.txt
 # java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP6_VAN_1015_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP6_VAN_1015_markDups.bam METRICS_FILE=metrics_ProSNP6_VAN_1015.txt
-# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP6_VAN_1179_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP6_VAN_1179_markDups.bam METRICS_FILE=metrics_ProSNP6_VAN_1179.txt
-# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP6_VAN_269_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP6_VAN_269_markDups.bam METRICS_FILE=metrics_ProSNP6_VAN_269.txt
-# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP6_VAN_396_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP6_VAN_396_markDups.bam METRICS_FILE=metrics_ProSNP6_VAN_396.txt
-# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP6_VAN_443_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP6_VAN_443_markDups.bam METRICS_FILE=metrics_ProSNP6_VAN_443.txt
-# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP6_VAN_93_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP6_VAN_93_markDups.bam METRICS_FILE=metrics_ProSNP6_VAN_93.txt
+java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP6_VAN_1179_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP6_VAN_1179_markDups.bam METRICS_FILE=metrics_ProSNP6_VAN_1179.txt
+java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP6_VAN_269_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP6_VAN_269_markDups.bam METRICS_FILE=metrics_ProSNP6_VAN_269.txt
+java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP6_VAN_396_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP6_VAN_396_markDups.bam METRICS_FILE=metrics_ProSNP6_VAN_396.txt
+java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP6_VAN_443_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP6_VAN_443_markDups.bam METRICS_FILE=metrics_ProSNP6_VAN_443.txt
+java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar MarkDuplicates INPUT=ProSNP6_VAN_93_Aligned.sortedByCoord.out.bam OUTPUT=ProSNP6_VAN_93_markDups.bam METRICS_FILE=metrics_ProSNP6_VAN_93.txt
