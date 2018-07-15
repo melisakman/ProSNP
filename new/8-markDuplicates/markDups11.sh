@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH -D /home/makman/ProSNP/mapping/bams
+#SBATCH -D /home/makman/ProSNP/mapping
 #SBATCH -J markdu11
 #SBATCH -o /home/makman/ProSNP/outs/mark_duplicates11.out
 #SBATCH -e /home/makman/ProSNP/outs/mark_duplicates11.err
