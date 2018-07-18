@@ -13,9 +13,8 @@ module load java
 module load R
 module load maven/3.2.3
 module load GATK/3.6
-module load samtools
 
-samtools faidx /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa
+java -Djava.io.tmpdir=/home/makman/temp/ -Xmx64G -jar /share/apps/picard-tools-2.7.1/picard.jar CreateSequenceDictionary R=/home/makman/Protea_assembly/graph_prepens2_73_1kb.fa O=/home/makman/Protea_assembly/graph_prepens2_73_1kb.dict
 java -Djava.io.tmpdir=/home/makman/temp/ -Xmx60G -jar /share/apps/GATK-3.6/GenomeAnalysisTK.jar \
 -T HaplotypeCaller \
 -R /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa \
