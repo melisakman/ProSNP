@@ -1,8 +1,8 @@
 #!/bin/bash -l
 #SBATCH -D /home/makman/ProSNP/mapping/
 #SBATCH -J VC1
-#SBATCH -o /home/makman/ProSNP/outs/variantCalling1.out
-#SBATCH -e /home/makman/ProSNP/outs/variantCalling1.err
+#SBATCH -o /home/makman/ProSNP/outs/variantCalling1b.out
+#SBATCH -e /home/makman/ProSNP/outs/variantCalling1b.err
 #SBATCH --mail-type=All
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH -p bigmemm
