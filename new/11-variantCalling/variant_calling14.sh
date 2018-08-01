@@ -5,7 +5,7 @@
 #SBATCH -e /home/makman/ProSNP/outs/variantCalling14.err
 #SBATCH --mail-type=All
 #SBATCH --mail-user=makman@berkeley.edu
-#SBATCH -p bigmemh
+#SBATCH -p bigmemm
 #SBATCH --mem=48GB
 #SBATCH --time=400:00:00
 module load java
