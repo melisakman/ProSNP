@@ -6,7 +6,7 @@
 #SBATCH --mail-type=All
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH -p bigmemh
-#SBATCH --mem=24GB
+#SBATCH --mem=48GB
 #SBATCH --time=400:00:00
 module load java
 module load R

@@ -5,10 +5,9 @@
 #SBATCH -e /home/makman/ProSNP/outs/variantCalling16.err
 #SBATCH --mail-type=All
 #SBATCH --mail-user=makman@berkeley.edu
-#SBATCH -p bigmemm
-#SBATCH --mem=24GB
+#SBATCH -p bigmemh
+#SBATCH --mem=48GB
 #SBATCH --time=400:00:00
-#SBATCH --array=1-20
 module load java
 module load R
 module load maven/3.2.3
