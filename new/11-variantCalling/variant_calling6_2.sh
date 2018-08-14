@@ -1,8 +1,8 @@
 #!/bin/bash -l
 #SBATCH -D /home/makman/ProSNP/mapping/
 #SBATCH -J VC6
-#SBATCH -o /home/makman/ProSNP/outs/variantCalling6b.out
-#SBATCH -e /home/makman/ProSNP/outs/variantCalling6b.err
+#SBATCH -o /home/makman/ProSNP/outs/variantCalling6b2.out
+#SBATCH -e /home/makman/ProSNP/outs/variantCalling6b2.err
 #SBATCH --mail-type=All
 #SBATCH --mail-user=makman@berkeley.edu
 #SBATCH -p bigmemm
@@ -132,11 +132,11 @@ module load GATK/3.6
 # java -Djava.io.tmpdir=/home/makman/temp/ -Xmx60G -jar /share/apps/GATK-3.6/GenomeAnalysisTK.jar -T HaplotypeCaller -R /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa -I ProSNP4_LOE_1033_markDups_RG.bam --filter_reads_with_N_cigar -stand_call_conf 20.0 -dontUseSoftClippedBases -o ProSNP4_LOE_1033.vcf
 # java -Djava.io.tmpdir=/home/makman/temp/ -Xmx60G -jar /share/apps/GATK-3.6/GenomeAnalysisTK.jar -T HaplotypeCaller -R /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa -I ProSNP4_LOE_1141_markDups_RG.bam --filter_reads_with_N_cigar -stand_call_conf 20.0 -dontUseSoftClippedBases -o ProSNP4_LOE_1141.vcf
 # java -Djava.io.tmpdir=/home/makman/temp/ -Xmx60G -jar /share/apps/GATK-3.6/GenomeAnalysisTK.jar -T HaplotypeCaller -R /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa -I ProSNP4_LOE_359_markDups_RG.bam --filter_reads_with_N_cigar -stand_call_conf 20.0 -dontUseSoftClippedBases -o ProSNP4_LOE_359.vcf
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx60G -jar /share/apps/GATK-3.6/GenomeAnalysisTK.jar -T HaplotypeCaller -R /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa -I ProSNP4_LOE_404_markDups_RG.bam --filter_reads_with_N_cigar -stand_call_conf 20.0 -dontUseSoftClippedBases -o ProSNP4_LOE_404.vcf
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx60G -jar /share/apps/GATK-3.6/GenomeAnalysisTK.jar -T HaplotypeCaller -R /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa -I ProSNP4_LOE_404_markDups_RG.bam --filter_reads_with_N_cigar -stand_call_conf 20.0 -dontUseSoftClippedBases -o ProSNP4_LOE_404.vcf
 java -Djava.io.tmpdir=/home/makman/temp/ -Xmx60G -jar /share/apps/GATK-3.6/GenomeAnalysisTK.jar -T HaplotypeCaller -R /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa -I ProSNP4_LOE_82_markDups_RG.bam --filter_reads_with_N_cigar -stand_call_conf 20.0 -dontUseSoftClippedBases -o ProSNP4_LOE_82.vcf
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx60G -jar /share/apps/GATK-3.6/GenomeAnalysisTK.jar -T HaplotypeCaller -R /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa -I ProSNP4_MGU_135_markDups_RG.bam --filter_reads_with_N_cigar -stand_call_conf 20.0 -dontUseSoftClippedBases -o ProSNP4_MGU_135.vcf
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx60G -jar /share/apps/GATK-3.6/GenomeAnalysisTK.jar -T HaplotypeCaller -R /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa -I ProSNP4_MGU_214_markDups_RG.bam --filter_reads_with_N_cigar -stand_call_conf 20.0 -dontUseSoftClippedBases -o ProSNP4_MGU_214.vcf
-java -Djava.io.tmpdir=/home/makman/temp/ -Xmx60G -jar /share/apps/GATK-3.6/GenomeAnalysisTK.jar -T HaplotypeCaller -R /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa -I ProSNP4_MGU_295_markDups_RG.bam --filter_reads_with_N_cigar -stand_call_conf 20.0 -dontUseSoftClippedBases -o ProSNP4_MGU_295.vcf
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx60G -jar /share/apps/GATK-3.6/GenomeAnalysisTK.jar -T HaplotypeCaller -R /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa -I ProSNP4_MGU_135_markDups_RG.bam --filter_reads_with_N_cigar -stand_call_conf 20.0 -dontUseSoftClippedBases -o ProSNP4_MGU_135.vcf
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx60G -jar /share/apps/GATK-3.6/GenomeAnalysisTK.jar -T HaplotypeCaller -R /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa -I ProSNP4_MGU_214_markDups_RG.bam --filter_reads_with_N_cigar -stand_call_conf 20.0 -dontUseSoftClippedBases -o ProSNP4_MGU_214.vcf
+# java -Djava.io.tmpdir=/home/makman/temp/ -Xmx60G -jar /share/apps/GATK-3.6/GenomeAnalysisTK.jar -T HaplotypeCaller -R /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa -I ProSNP4_MGU_295_markDups_RG.bam --filter_reads_with_N_cigar -stand_call_conf 20.0 -dontUseSoftClippedBases -o ProSNP4_MGU_295.vcf
 
 # java -Djava.io.tmpdir=/home/makman/temp/ -Xmx60G -jar /share/apps/GATK-3.6/GenomeAnalysisTK.jar -T HaplotypeCaller -R /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa -I ProSNP4_MGU_407_markDups_RG.bam --filter_reads_with_N_cigar -stand_call_conf 20.0 -dontUseSoftClippedBases -o ProSNP4_MGU_407.vcf
 # java -Djava.io.tmpdir=/home/makman/temp/ -Xmx60G -jar /share/apps/GATK-3.6/GenomeAnalysisTK.jar -T HaplotypeCaller -R /home/makman/Protea_assembly/graph_prepens2_73_1kb.fa -I ProSNP4_POT_1005_markDups_RG.bam --filter_reads_with_N_cigar -stand_call_conf 20.0 -dontUseSoftClippedBases -o ProSNP4_POT_1005.vcf
