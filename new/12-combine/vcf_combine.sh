@@ -350,7 +350,6 @@ ProSNP6_UNI_546.vcf \
 ProSNP6_VAN_1015.vcf \
 ProSNP6_VAN_1179.vcf \
 ProSNP6_VAN_269.vcf \
-ProSNP6_VAN_396.vcf \
-ProSNP6_VAN_93.vcf > all_combined.vcf
+ProSNP6_VAN_396.vcf > all_combined.vcf
 
 
