@@ -10,7 +10,7 @@
 #SBATCH --time=400:00:00
 module load vcftools/0.1.13
 module load tabix/0.2.6
-tabix *.vcf
+tabix -f *.vcf
 
 vcf-merge ProSNP12_ALC_1045.vcf \
 ProSNP12_ALC_12.vcf \
